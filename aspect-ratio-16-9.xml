@@ -14,7 +14,7 @@
     <view name="system">
         <grid name="systemGrid">
             <itemSize>0.145 0.255</itemSize>
-			<itemSpacing>0.013 0.010</itemSpacing>
+			<itemSpacing>0.007 0.010</itemSpacing>
         </grid>
         <image name="arrowBlock">
             <size>0.023 0.047</size>
@@ -30,23 +30,9 @@
             <itemsPerLine>5</itemsPerLine>
             <itemMargin>0.0028125 0.005</itemMargin>
         </badges>
+		<video name="gameVideo">
+			<pos>0.609 0.378</pos>
+			<maxSize>0.50 0.44</maxSize>
+		</video>		
     </view>
-	
-    <variant name="withVideos">
-        <view name="gamelist">
-            <video name="gameVideo">
-                <pos>0.609 0.378</pos>
-                <maxSize>0.50 0.44</maxSize>
-            </video>
-        </view>
-    </variant>
-
-    <variant name="withoutVideos">
-        <view name="gamelist">
-            <image name="gameImage">
-                <pos>0.609 0.378</pos>
-                <maxSize>0.50 0.44</maxSize>			
-            </image>
-        </view>
-    </variant>	
 </theme>

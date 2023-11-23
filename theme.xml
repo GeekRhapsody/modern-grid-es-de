@@ -57,9 +57,8 @@
 
         <view name="system">	
 			<grid name="systemGrid">
-                <pos>0.031 0.09</pos>
-                <size>1 0.79</size>
-				<staticImage>./art/${system.theme}.jpg</staticImage>
+                <pos>0.045 0.09</pos>
+                <size>1 0.79</size>				
 				<itemScale>1</itemScale>				
 				<fractionalRows>true</fractionalRows>
 				<itemTransitions>animate</itemTransitions>
@@ -68,7 +67,7 @@
 				<imageRelativeScale>0.97</imageRelativeScale>
 				<imageFit>contain</imageFit>				
 				<backgroundRelativeScale>1.0</backgroundRelativeScale>
-				<backgroundColor>424242</backgroundColor>
+				<backgroundColor>${tertiaryColor}</backgroundColor>
 				<selectorRelativeScale>1.0</selectorRelativeScale>
 				<selectorLayer>middle</selectorLayer>
 				<selectorColor>${mainColor}</selectorColor>
@@ -185,30 +184,22 @@
                 <horizontalAlignment>right</horizontalAlignment>
                 <color>${secondaryColor}</color>
             </gamelistinfo>
-            <!-- Metadata panel (right) -->
-			<!--
-            <image name="backgroundMetadata">
-                <pos>0.375 0.20</pos>
-                <size>1 0.63</size>
-                <origin>0 0</origin>
+			<image name="metadataDividerLine">
+                <pos>0.378 0.515</pos>
+                <size>0.001 0.710</size>
+                <origin>0.5 0.5</origin>
                 <path>./assets/box.png</path>
                 <tile>false</tile>
-                <color>${backgroundColor2}</color>
-            </image>
-            <image name="backgroundMetadataGradTop">
-                <pos>0.375 0.131</pos>
-                <size>1 0.07</size>
-                <origin>0 0</origin>
-                <rotation>180</rotation>
-                <path>./assets/${colorSchemeName}/gradient.png</path>
-            </image>
-            <image name="backgroundMetadataGradBottom">
-                <pos>0.375 0.83</pos>
-                <size>1 0.07</size>
-                <origin>0 0</origin>
-                <path>./assets/${colorSchemeName}/gradient.png</path>				
-            </image>
-			-->
+                <color>${tertiaryColor}</color>
+            </image>		
+            <video name="gameVideo">
+                <origin>0.5 0.5</origin>
+                <imageType>image</imageType>
+                <pillarboxes>false</pillarboxes>
+				<pillarboxThreshold>1 1</pillarboxThreshold>                
+                <delay>1.5</delay>
+                <scrollFadeIn>true</scrollFadeIn>
+            </video>			
             <text name="description">
 				<pos>0.39 0.62</pos>                
                 <size>0.440 0.280</size>
@@ -356,45 +347,38 @@
         </view>
     </variant>
 
-    <variant name="withVideos">
-        <view name="gamelist">
-			<image name="metadataDividerLine">
-                <pos>0.378 0.515</pos>
-                <size>0.001 0.710</size>
-                <origin>0.5 0.5</origin>
-                <path>./assets/box.png</path>
-                <tile>false</tile>
-                <color>${tertiaryColor}</color>
-            </image>		
-            <video name="gameVideo">
-                <origin>0.5 0.5</origin>
-                <imageType>image</imageType>
-                <pillarboxes>false</pillarboxes>
-				<pillarboxThreshold>1 1</pillarboxThreshold>                
-                <delay>1.5</delay>
-                <scrollFadeIn>true</scrollFadeIn>
-            </video>
+    <variant name="default">
+        <view name="system">
+			<grid name="systemGrid">
+				<staticImage>./art/modern/${system.theme}.jpg</staticImage>
+			</grid>
         </view>
     </variant>
 
-    <variant name="withoutVideos">
-		<image name="metadataDividerLine">
-			<pos>0.378 0.515</pos>
-			<size>0.001 0.710</size>
-			<origin>0.5 0.5</origin>
-			<path>./assets/box.png</path>
-			<tile>false</tile>
-			<color>${tertiaryColor}</color>
-		</image>	
-        <view name="gamelist">
-            <image name="gameImage">
-                <origin>0.5 0.5</origin>
-                <imageType>image</imageType>
-                <scrollFadeIn>true</scrollFadeIn>
-            </image>
+    <variant name="nso">
+        <view name="system">
+			<grid name="systemGrid">
+				<staticImage>./art/nso/${system.theme}.jpg</staticImage>
+			</grid>
         </view>
     </variant>
 
+    <variant name="systems">
+        <view name="system">
+			<grid name="systemGrid">
+				<staticImage>./art/systems/${system.theme}.webp</staticImage>
+			</grid>
+        </view>
+    </variant>
+	
+    <variant name="controllers">
+        <view name="system">
+			<grid name="systemGrid">
+				<staticImage>./art/controllers/${system.theme}.png</staticImage>
+			</grid>
+        </view>
+    </variant>	
+	
     <variant name="noGameMedia">
         <view name="gamelist">
             <textlist name="gamelistTextlist">
